@@ -12,20 +12,28 @@ public class MovementMain : MonoBehaviour
     private InputAction airdiveAction;
     private InputAction dashAction;
 
-    private BoxCollider2D collider;
+    private CapsuleCollider2D collider;
     private Rigidbody2D rigidBody;
 
     private int readDirectionX = 0;
     private float actualDirectionX = 0;
     public float moveSpeed = 175f;
 
-    private int remainingDashes = 1;
+    private int remainingDashes;
+    public int dashRestoreAmount = 1;
     private int dashDirection = 1;
     public float dashForce = 7f;
 
-    private int remainingJumps = 1;
+
+    private Vector2 floorDetectionSize;
+
+    private int remainingJumps;
+    public int jumpRestoreAmount = 1;
+    private float lastJumpedTime = 0;
+    private float restoreDetectionCooldownTime = 0.3f;
     public float jumpForce = 8.5f;
 
+    private bool hitFloor = true;
     private bool canAirdive = false;
     public float airDiveForce = -20f;
 
@@ -38,8 +46,13 @@ public class MovementMain : MonoBehaviour
         airdiveAction = InputSystem.actions.FindAction("AirDive");
         dashAction = InputSystem.actions.FindAction("Dash");
 
-        collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<CapsuleCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
+
+        remainingDashes = dashRestoreAmount;
+        remainingJumps = jumpRestoreAmount;
+
+        floorDetectionSize = new Vector2(collider.size.x, 0.1f);
     }
 
     private void OnEnable()
@@ -70,23 +83,47 @@ public class MovementMain : MonoBehaviour
             dashDirection = -1;
         }
 
+        Vector2 floorCastOrigin = new Vector2(rigidBody.position.x, rigidBody.position.y - floorDetectionSize.y / 2 - collider.size.y / 2);
+        RaycastHit2D floorHit = Physics2D.BoxCast(floorCastOrigin, floorDetectionSize, 0, Vector2.down * floorDetectionSize.y);
+        print(floorCastOrigin);
 
+        if (floorHit && floorHit.collider && Time.time - lastJumpedTime >= restoreDetectionCooldownTime)
+        {
+            //print(floorHit.collider);
+            hitFloor = true;
+
+            remainingDashes = dashRestoreAmount;
+            remainingJumps = jumpRestoreAmount;
+        } else if (hitFloor)
+        {
+            hitFloor = false;
+            canAirdive = true;
+        }
 
         // dash
         if (remainingDashes > 0 && dashAction.WasPressedThisFrame())
         {
+            remainingDashes -= 1;
             Dash();
         }
 
         // jump
         if (remainingJumps > 0 && jumpAction.WasPressedThisFrame())
         {
+            remainingJumps -= 1;
             Jump();
+
+            lastJumpedTime = Time.time;
+
+            hitFloor = false;
+            canAirdive = true;
         }
 
         // airdive
         if (canAirdive && airdiveAction.WasPressedThisFrame())
         {
+            hitFloor = false;
+            canAirdive = false;
             AirDive();
         }
     }
@@ -111,17 +148,22 @@ public class MovementMain : MonoBehaviour
 
     private void Jump()
     {
-        //print("jump");
+        print("jump");
+        print(remainingJumps);
         rigidBody.linearVelocityY = jumpForce;
     }
 
     private void AirDive()
     {
+        print("dive");
+        print(canAirdive);
         rigidBody.linearVelocityY = airDiveForce;
     }
 
     private void Dash()
     {
+        print("dash");
+        print(remainingDashes);
         print(dashDirection);
         actualDirectionX = dashDirection * dashForce;
     }
