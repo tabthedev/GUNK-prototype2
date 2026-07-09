@@ -14,14 +14,14 @@ public class MovementMain : MonoBehaviour
     private CapsuleCollider2D collider;
     private Rigidbody2D rigidBody;
 
-    private ContactFilter2D tilemapFilter;
-
     private int readDirectionX = 0;
     private float actualDirectionX = 0;
     public float moveSpeed = 175f;
 
     private int remainingDashes;
     public int dashRestoreAmount = 1;
+    private float lastDashedTime = 0;
+    private float dashCooldownTime = 0.5f;
     private int dashDirection = 1;
     public float dashForce = 7f;
 
@@ -52,8 +52,6 @@ public class MovementMain : MonoBehaviour
 
         remainingDashes = dashRestoreAmount;
         remainingJumps = jumpRestoreAmount;
-
-        tilemapFilter = new ContactFilter2D();
         
 
         floorDetectionSize = new Vector2(collider.size.x * 0.8f, collider.size.x * 0.25f);
@@ -89,7 +87,7 @@ public class MovementMain : MonoBehaviour
 
 
 
-        RaycastHit2D floorHit = Physics2D.BoxCast(Vector2.down * ((collider.size.y - floorDetectionSize.y) * 0.5f + 0.02f), floorDetectionSize, 0f, Vector2.zero, );
+        RaycastHit2D floorHit = Physics2D.BoxCast(rigidBody.position, floorDetectionSize, 0f, Vector2.down, ((collider.size.y - floorDetectionSize.y) * 0.5f + 0.02f));
         //print(floorCastOrigin);
         //print(floorDetectionSize);
         //print(Vector2.down * floorDetectionSize.y);
@@ -112,10 +110,12 @@ public class MovementMain : MonoBehaviour
         }
 
         // dash
-        if (remainingDashes > 0 && dashAction.WasPressedThisFrame())
+        if (remainingDashes > 0 && dashAction.WasPressedThisFrame() && Time.time - lastDashedTime >= dashCooldownTime)
         {
             remainingDashes -= 1;
             Dash();
+
+            lastDashedTime = dashCooldownTime;
         }
 
         // jump
