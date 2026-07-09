@@ -37,6 +37,7 @@ public class CameraMain : MonoBehaviour
             cameraTarget = cameraFixedPosition;
         }
 
-        camera.transform.position = Vector2.Lerp(camera.transform.position, cameraTarget + cameraOffset, math.clamp(alphaSpeed * Time.deltaTime, 0, 1));
+        Vector2 actualPosition = Vector2.Lerp(camera.transform.position, cameraTarget + cameraOffset, math.clamp(alphaSpeed * Time.deltaTime, 0, 1));
+        camera.transform.position = new Vector3(actualPosition.x, actualPosition.y, -10);
     }
 }
