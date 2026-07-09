@@ -7,7 +7,8 @@ public class CameraMain : MonoBehaviour
     public GameObject player;
 
     public string cameraMode = "FollowPlayer"; // FollowPlayer / FollowPlayerXOnly / FollowPlayerYOnly / FixedPosition
-    public float alphaSpeed = 2;
+    public float xAlphaSpeed = 2;
+    public float yAlphaSpeed = .5f;
     public Vector2 cameraFixedPosition = Vector2.zero;
     public Vector2 cameraOffset = Vector2.up * 2;
 
@@ -37,7 +38,10 @@ public class CameraMain : MonoBehaviour
             cameraTarget = cameraFixedPosition;
         }
 
-        Vector2 actualPosition = Vector2.Lerp(camera.transform.position, cameraTarget + cameraOffset, math.clamp(alphaSpeed * Time.deltaTime, 0, 1));
-        camera.transform.position = new Vector3(actualPosition.x, actualPosition.y, -10);
+        camera.transform.position = new Vector3(
+            math.lerp(camera.transform.position.x, cameraTarget.x + cameraOffset.x, math.clamp(xAlphaSpeed * Time.deltaTime, 0, 1)),
+            math.lerp(camera.transform.position.y, cameraTarget.y + cameraOffset.y, math.clamp(yAlphaSpeed * Time.deltaTime, 0, 1)),
+            -10
+        );
     }
 }
