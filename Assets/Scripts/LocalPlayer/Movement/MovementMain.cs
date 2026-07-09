@@ -87,7 +87,7 @@ public class MovementMain : MonoBehaviour
 
 
 
-        RaycastHit2D floorHit = Physics2D.BoxCast(rigidBody.position, floorDetectionSize, 0f, Vector2.down, ((collider.size.y - floorDetectionSize.y) * 0.5f + 0.02f));
+        RaycastHit2D floorHit = Physics2D.BoxCast(rigidBody.position, floorDetectionSize, 0f, Vector2.down, ((collider.size.y - floorDetectionSize.y) * 0.5f + 0.02f), LayerMask.GetMask("Map"));
         //print(floorCastOrigin);
         //print(floorDetectionSize);
         //print(Vector2.down * floorDetectionSize.y);
