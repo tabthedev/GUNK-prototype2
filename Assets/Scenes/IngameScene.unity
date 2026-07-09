@@ -317,7 +317,8 @@ MonoBehaviour:
   camera: {fileID: 519420031}
   player: {fileID: 678671956}
   cameraMode: FollowPlayer
-  alphaSpeed: 10
+  xAlphaSpeed: 2
+  yAlphaSpeed: 0.5
   cameraFixedPosition: {x: 0, y: 0}
   cameraOffset: {x: 0, y: 2}
 --- !u!1 &619394800
@@ -521,7 +522,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6447722072507503168, guid: 10f3cacccb0c4c547be76836eba20664, type: 3}
+  m_Sprite: {fileID: 3419382289216256257, guid: 45fb57cec503f6d4284e0d20c385ec77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -541,7 +542,7 @@ Transform:
   m_GameObject: {fileID: 678671956}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -600,8 +601,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0315, y: 0}
-  m_Size: {x: 0.8, y: 0.99}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.8, y: 1.025}
   m_Direction: 0
 --- !u!1 &1739403687
 GameObject:
