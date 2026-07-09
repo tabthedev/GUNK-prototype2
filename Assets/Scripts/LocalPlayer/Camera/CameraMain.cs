@@ -12,6 +12,8 @@ public class CameraMain : MonoBehaviour
     public Vector2 cameraFixedPosition = Vector2.zero;
     public Vector2 cameraOffset = Vector2.up * 2;
 
+    public float cameraProjectionSize = 5;
+
     private Vector2 cameraTarget;
     private void Awake()
     {
@@ -21,6 +23,8 @@ public class CameraMain : MonoBehaviour
     
     private void Update()
     {
+        camera.orthographicSize = cameraProjectionSize;
+
         if (cameraMode == "FollowPlayer")
         {
             cameraTarget = player.transform.position;
