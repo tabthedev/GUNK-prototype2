@@ -318,10 +318,10 @@ MonoBehaviour:
   player: {fileID: 678671956}
   cameraMode: FollowPlayer
   xAlphaSpeed: 2
-  yAlphaSpeed: 0.5
+  yAlphaSpeed: 0.1
   cameraFixedPosition: {x: 0, y: 0}
-  cameraOffset: {x: 0, y: 2}
-  cameraProjectionSize: 5
+  cameraOffset: {x: 0, y: 0.5}
+  cameraProjectionSize: 1.25
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
