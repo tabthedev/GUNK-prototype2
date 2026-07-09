@@ -1,7 +1,6 @@
 using UnityEngine;
 using Unity.Mathematics;
 using UnityEngine.InputSystem;
-using System.Runtime.CompilerServices;
 
 public class MovementMain : MonoBehaviour
 {
@@ -14,6 +13,8 @@ public class MovementMain : MonoBehaviour
 
     private CapsuleCollider2D collider;
     private Rigidbody2D rigidBody;
+
+    private ContactFilter2D tilemapFilter;
 
     private int readDirectionX = 0;
     private float actualDirectionX = 0;
@@ -52,7 +53,10 @@ public class MovementMain : MonoBehaviour
         remainingDashes = dashRestoreAmount;
         remainingJumps = jumpRestoreAmount;
 
-        floorDetectionSize = new Vector2(collider.size.x, 0.1f);
+        tilemapFilter = new ContactFilter2D();
+        
+
+        floorDetectionSize = new Vector2(collider.size.x * 0.8f, collider.size.x * 0.25f);
     }
 
     private void OnEnable()
@@ -83,19 +87,26 @@ public class MovementMain : MonoBehaviour
             dashDirection = -1;
         }
 
-        Vector2 floorCastOrigin = new Vector2(rigidBody.position.x, rigidBody.position.y - floorDetectionSize.y / 2 - collider.size.y / 2);
-        RaycastHit2D floorHit = Physics2D.BoxCast(floorCastOrigin, floorDetectionSize, 0, Vector2.down * floorDetectionSize.y);
-        print(floorCastOrigin);
 
-        if (floorHit && floorHit.collider && Time.time - lastJumpedTime >= restoreDetectionCooldownTime)
+
+        RaycastHit2D floorHit = Physics2D.BoxCast(Vector2.down * ((collider.size.y - floorDetectionSize.y) * 0.5f + 0.02f), floorDetectionSize, 0f, Vector2.zero, );
+        //print(floorCastOrigin);
+        //print(floorDetectionSize);
+        //print(Vector2.down * floorDetectionSize.y);
+
+        
+
+        if (floorHit && floorHit.collider != null && Time.time - lastJumpedTime >= restoreDetectionCooldownTime)
         {
-            //print(floorHit.collider);
+            print(floorHit.collider);
+            
             hitFloor = true;
 
             remainingDashes = dashRestoreAmount;
             remainingJumps = jumpRestoreAmount;
         } else if (hitFloor)
         {
+            print('b');
             hitFloor = false;
             canAirdive = true;
         }
