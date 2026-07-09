@@ -542,7 +542,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MovementMain
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   moveSpeed: 1.75
+  dashRestoreAmount: 1
   dashForce: 7
+  jumpRestoreAmount: 1
   jumpForce: 8.5
   airDiveForce: -20
 --- !u!70 &678671962
@@ -594,7 +596,7 @@ GameObject:
   - component: {fileID: 1739403691}
   - component: {fileID: 1739403690}
   - component: {fileID: 1739403689}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
