@@ -11,6 +11,8 @@ public class SwitchCamera : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         camera = GameObject.FindAnyObjectByType<Camera>();
 
+        collider = gameObject.GetComponent<Collider2D>();
+
         LayerMask layer_nothing = LayerMask.GetMask();
         LayerMask layer_localPlayer = LayerMask.GetMask("LocalPlayer");
 
