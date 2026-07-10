@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SwitchCamera : MonoBehaviour
+public class SwitchCameraConfig : MonoBehaviour
 {
     private Collider2D collider;
     private GameObject player;
