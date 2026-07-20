@@ -50,6 +50,11 @@ public class MovementMain : MonoBehaviour
         collider = GetComponent<CapsuleCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
 
+        LayerMask layer_nothing = LayerMask.GetMask();
+
+        collider.callbackLayers = layer_nothing;
+
+
         remainingDashes = dashRestoreAmount;
         remainingJumps = jumpRestoreAmount;
         
