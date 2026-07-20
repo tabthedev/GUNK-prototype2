@@ -6,6 +6,8 @@ public class SwitchCameraConfig : MonoBehaviour
     private Collider2D collider;
     private GameObject player;
     private Camera camera;
+    private GameObject cameraManager;
+    private CameraMain cameraMain;
 
     public string cameraMode = "FollowPlayer";
     public Vector2 cameraAlphaSpeed;
@@ -30,6 +32,8 @@ public class SwitchCameraConfig : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         camera = GameObject.FindAnyObjectByType<Camera>();
+        cameraManager = GameObject.FindGameObjectWithTag("CameraManager");
+        cameraMain = cameraManager.GetComponent<CameraMain>();
 
         collider = gameObject.GetComponent<Collider2D>();
 
@@ -46,11 +50,40 @@ public class SwitchCameraConfig : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.otherCollider.gameObject);
+        print(collision.collider.gameObject);
         print(collision.gameObject);
-        if (collision.otherCollider.gameObject == player)
+        if (collision.collider.gameObject == player)
         {
-            print("a");
+            print("foo");
+            if (!ignoreCameraModeChange)
+            {
+                cameraMain.cameraMode = cameraMode;
+            }
+            if (!ignoreCameraAlphaSpeed)
+            {
+                cameraMain.cameraXAlphaSpeed = cameraAlphaSpeed.x;
+                cameraMain.cameraYAlphaSpeed = cameraAlphaSpeed.y;
+            }
+            if (!ignoreCameraTargetFixedPosition)
+            {
+                cameraMain.cameraFixedPosition = cameraTargetFixedPosition;
+            }
+            if (!ignoreCameraTargetOffset)
+            {
+                cameraMain.cameraOffset = cameraTargetOffset;
+            }
+            if (!ignoreCameraProjectionSize)
+            {
+                cameraMain.cameraProjectionSize = cameraProjectionSize;
+            }
+            if (!ignoreCameraProjectionSizeAlphaSpeed)
+            {
+                cameraMain.cameraProjectionSizeAlphaSpeed = cameraProjectionSizeAlphaSpeed;
+            }
+            if (reflectActualCameraPosition)
+            {
+                actualCameraPosition = camera.transform.position;
+            }
         }
     }
 }

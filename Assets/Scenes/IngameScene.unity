@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 531653809}
   m_Layer: 0
   m_Name: CameraManager
-  m_TagString: Untagged
+  m_TagString: CameraManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,8 +485,8 @@ MonoBehaviour:
   camera: {fileID: 519420031}
   player: {fileID: 678671956}
   cameraMode: FollowPlayer
-  xAlphaSpeed: 2
-  yAlphaSpeed: 0.1
+  cameraXAlphaSpeed: 2
+  cameraYAlphaSpeed: 0.5
   cameraFixedPosition: {x: 0, y: 0}
   cameraOffset: {x: 0, y: 0.5}
   cameraProjectionSize: 3
