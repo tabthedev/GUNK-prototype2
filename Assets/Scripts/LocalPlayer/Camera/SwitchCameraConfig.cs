@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SwitchCameraConfig : MonoBehaviour
@@ -5,6 +6,25 @@ public class SwitchCameraConfig : MonoBehaviour
     private Collider2D collider;
     private GameObject player;
     private Camera camera;
+
+    public string cameraMode = "FollowPlayer";
+    public Vector2 cameraAlphaSpeed;
+    public Vector2 cameraTargetFixedPosition;
+    public Vector2 cameraTargetOffset;
+    public float cameraProjectionSize = 5;
+    public float cameraProjectionSizeAlphaSpeed = 1;
+    public Vector2 actualCameraPosition;
+
+    public bool ignoreCameraModeChange;
+    public bool ignoreCameraAlphaSpeed;
+    public bool ignoreCameraTargetFixedPosition;
+    public bool ignoreCameraTargetOffset;
+    public bool ignoreCameraProjectionSize;
+    public bool ignoreCameraProjectionSizeAlphaSpeed;
+    public bool reflectActualCameraPosition;
+
+
+
 
     private void Awake()
     {
