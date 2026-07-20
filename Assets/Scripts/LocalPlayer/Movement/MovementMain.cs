@@ -124,17 +124,10 @@ public class MovementMain : MonoBehaviour
         }
 
         // jump
-        if (remainingJumps == jumpRestoreAmount && jumpAction.IsPressed())
-        {
-            remainingJumps -= 1;
-            Jump();
-
-            lastJumpedTime = Time.time;
-
-            hitFloor = false;
-            canAirdive = true;
-        }
-        else if (remainingJumps > 0 && jumpAction.WasPressedThisFrame())
+        if (
+            ( remainingJumps == jumpRestoreAmount && jumpAction.IsPressed() ) ||
+            ( remainingJumps > 0 && jumpAction.WasPressedThisFrame() )
+           )
         {
             remainingJumps -= 1;
             Jump();
