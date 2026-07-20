@@ -7,12 +7,13 @@ public class CameraMain : MonoBehaviour
     public GameObject player;
 
     public string cameraMode = "FollowPlayer"; // FollowPlayer / FollowPlayerXOnly / FollowPlayerYOnly / FixedPosition
-    public float xAlphaSpeed = 2;
-    public float yAlphaSpeed = .5f;
+    public float cameraXAlphaSpeed = 2;
+    public float cameraYAlphaSpeed = .5f;
     public Vector2 cameraFixedPosition = Vector2.zero;
     public Vector2 cameraOffset = Vector2.up * 2;
 
     public float cameraProjectionSize = 5;
+    public float cameraProjectionSizeAlphaSpeed = 5;
 
     private Vector2 cameraTarget;
     private void Awake()
@@ -23,7 +24,7 @@ public class CameraMain : MonoBehaviour
     
     private void Update()
     {
-        camera.orthographicSize = cameraProjectionSize;
+        camera.orthographicSize = math.lerp(camera.orthographicSize, cameraProjectionSize, cameraProjectionSizeAlphaSpeed * Time.deltaTime);
 
         if (cameraMode == "FollowPlayer")
         {
@@ -43,8 +44,8 @@ public class CameraMain : MonoBehaviour
         }
 
         camera.transform.position = new Vector3(
-            math.lerp(camera.transform.position.x, cameraTarget.x + cameraOffset.x, math.clamp(xAlphaSpeed * Time.deltaTime, 0, 1)),
-            math.lerp(camera.transform.position.y, cameraTarget.y + cameraOffset.y, math.clamp(yAlphaSpeed * Time.deltaTime, 0, 1)),
+            math.lerp(camera.transform.position.x, cameraTarget.x + cameraOffset.x, math.clamp(cameraXAlphaSpeed * Time.deltaTime, 0, 1)),
+            math.lerp(camera.transform.position.y, cameraTarget.y + cameraOffset.y, math.clamp(cameraYAlphaSpeed * Time.deltaTime, 0, 1)),
             -10
         );
     }
