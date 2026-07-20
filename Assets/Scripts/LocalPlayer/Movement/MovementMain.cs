@@ -156,7 +156,7 @@ public class MovementMain : MonoBehaviour
 
     private void move()
     {
-        actualDirectionX = math.lerp(actualDirectionX, readDirectionX, 5f * Time.deltaTime);
+        actualDirectionX = math.lerp(actualDirectionX, readDirectionX, math.clamp(5f * Time.deltaTime, 0, 1));
 
         rigidBody.linearVelocityX = actualDirectionX * moveSpeed * Time.deltaTime * 100;
         //print(actualDirectionX);

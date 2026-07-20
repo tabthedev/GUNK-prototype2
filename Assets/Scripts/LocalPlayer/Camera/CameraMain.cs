@@ -24,7 +24,7 @@ public class CameraMain : MonoBehaviour
     
     private void Update()
     {
-        camera.orthographicSize = math.lerp(camera.orthographicSize, cameraProjectionSize, cameraProjectionSizeAlphaSpeed * Time.deltaTime);
+        camera.orthographicSize = math.lerp(camera.orthographicSize, cameraProjectionSize, math.clamp(cameraProjectionSizeAlphaSpeed * Time.deltaTime, 0, 1));
 
         if (cameraMode == "FollowPlayer")
         {
