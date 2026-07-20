@@ -484,7 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraMain
   camera: {fileID: 519420031}
   player: {fileID: 678671956}
-  cameraMode: FollowPlayer
+  cameraMode: FollowPlayerXOnly
   cameraXAlphaSpeed: 2
   cameraYAlphaSpeed: 0.5
   cameraFixedPosition: {x: 0, y: 0}
