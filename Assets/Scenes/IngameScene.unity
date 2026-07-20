@@ -242,6 +242,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c45ae896a19154cab068235eea9b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchCameraConfig
+  cameraMode: FixedPosition
+  cameraAlphaSpeed: {x: 0, y: 0}
+  cameraTargetFixedPosition: {x: 0, y: 0}
+  cameraTargetOffset: {x: 0, y: 0}
+  cameraProjectionSize: 5
+  cameraProjectionSizeAlphaSpeed: 1
+  actualCameraPosition: {x: 0, y: 0}
+  ignoreCameraModeChange: 0
+  ignoreCameraAlphaSpeed: 1
+  ignoreCameraTargetFixedPosition: 0
+  ignoreCameraTargetOffset: 1
+  ignoreCameraProjectionSize: 0
+  ignoreCameraProjectionSizeAlphaSpeed: 1
+  reflectActualCameraPosition: 0
 --- !u!1 &454537364
 GameObject:
   m_ObjectHideFlags: 0
