@@ -101,7 +101,7 @@ public class MovementMain : MonoBehaviour
 
         if (floorHit && floorHit.collider != null && Time.time - lastJumpedTime >= restoreDetectionCooldownTime)
         {
-            print(floorHit.collider);
+            //print(floorHit.collider);
             
             hitFloor = true;
 
