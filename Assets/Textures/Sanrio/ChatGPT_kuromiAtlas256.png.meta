@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 70d022a51dfcb9844bd7eb522c953c3b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6250926307357202761
+    second: ChatGPT_kuromiAtlas256_0
+  - first:
+      213: -294014111009621099
+    second: ChatGPT_kuromiAtlas256_1
+  - first:
+      213: 3978009467101140554
+    second: ChatGPT_kuromiAtlas256_2
+  - first:
+      213: -5402061240881207545
+    second: ChatGPT_kuromiAtlas256_3
+  - first:
+      213: -4849991612160955008
+    second: ChatGPT_kuromiAtlas256_4
+  - first:
+      213: -4214728668091702076
+    second: ChatGPT_kuromiAtlas256_5
+  - first:
+      213: 9183814887824439484
+    second: ChatGPT_kuromiAtlas256_6
+  - first:
+      213: -1499972640732458018
+    second: ChatGPT_kuromiAtlas256_7
+  - first:
+      213: 5114752271518259190
+    second: ChatGPT_kuromiAtlas256_8
+  - first:
+      213: 6516362838233191336
+    second: ChatGPT_kuromiAtlas256_9
+  - first:
+      213: 5266608184529037260
+    second: ChatGPT_kuromiAtlas256_10
+  - first:
+      213: -7958929925713633667
+    second: ChatGPT_kuromiAtlas256_11
+  - first:
+      213: 5578609573336761715
+    second: ChatGPT_kuromiAtlas256_12
+  - first:
+      213: -3795703881068845212
+    second: ChatGPT_kuromiAtlas256_13
+  - first:
+      213: -7390318633610454892
+    second: ChatGPT_kuromiAtlas256_14
+  - first:
+      213: 8655738440823416836
+    second: ChatGPT_kuromiAtlas256_15
+  - first:
+      213: 8900289055210396172
+    second: ChatGPT_kuromiAtlas256_16
+  - first:
+      213: 5949713013435463956
+    second: ChatGPT_kuromiAtlas256_17
+  - first:
+      213: 6154468853940794348
+    second: ChatGPT_kuromiAtlas256_18
+  - first:
+      213: 3694648167847999047
+    second: ChatGPT_kuromiAtlas256_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 233
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1117
+        width: 207
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9499b239b50cfb650800000000000000
+      internalID: 6250926307357202761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1116
+        width: 197
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59bb15a49b37bebf0800000000000000
+      internalID: -294014111009621099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_2
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1117
+        width: 204
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4654bfa88ab43730800000000000000
+      internalID: 3978009467101140554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_3
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1117
+        width: 199
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 707ae5a3ce50805b0800000000000000
+      internalID: -5402061240881207545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 855
+        width: 173
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08da589335e51bcb0800000000000000
+      internalID: -4849991612160955008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_5
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 853
+        width: 171
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c42db16b964285c0800000000000000
+      internalID: -4214728668091702076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_6
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 853
+        width: 172
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb838b78bf6737f70800000000000000
+      internalID: 9183814887824439484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_7
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 854
+        width: 167
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3565894d60f2be0800000000000000
+      internalID: -1499972640732458018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_8
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 573
+        width: 198
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7d7f187104bf640800000000000000
+      internalID: 5114752271518259190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_9
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 581
+        width: 180
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a31278e975ce6a50800000000000000
+      internalID: 6516362838233191336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_10
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 604
+        width: 175
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7a40a7d30c61940800000000000000
+      internalID: 5266608184529037260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_11
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 596
+        width: 165
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7edc9996633c8190800000000000000
+      internalID: -7958929925713633667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 331
+        width: 162
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375c457a9d33b6d40800000000000000
+      internalID: 5578609573336761715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 323
+        width: 168
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467e1504e63f25bc0800000000000000
+      internalID: -3795703881068845212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_14
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 314
+        width: 164
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498d2babb50507990800000000000000
+      internalID: -7390318633610454892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_15
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 314
+        width: 169
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40829f9704c5f1870800000000000000
+      internalID: 8655738440823416836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_16
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 57
+        width: 170
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0adc1e6dbd248b70800000000000000
+      internalID: 8900289055210396172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_17
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 57
+        width: 173
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419f6597670a19250800000000000000
+      internalID: 5949713013435463956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 57
+        width: 191
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3b85c90d0196550800000000000000
+      internalID: 6154468853940794348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT_kuromiAtlas256_19
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 45
+        width: 165
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746b0aefee6064330800000000000000
+      internalID: 3694648167847999047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ChatGPT_kuromiAtlas256_0: 6250926307357202761
+      ChatGPT_kuromiAtlas256_1: -294014111009621099
+      ChatGPT_kuromiAtlas256_10: 5266608184529037260
+      ChatGPT_kuromiAtlas256_11: -7958929925713633667
+      ChatGPT_kuromiAtlas256_12: 5578609573336761715
+      ChatGPT_kuromiAtlas256_13: -3795703881068845212
+      ChatGPT_kuromiAtlas256_14: -7390318633610454892
+      ChatGPT_kuromiAtlas256_15: 8655738440823416836
+      ChatGPT_kuromiAtlas256_16: 8900289055210396172
+      ChatGPT_kuromiAtlas256_17: 5949713013435463956
+      ChatGPT_kuromiAtlas256_18: 6154468853940794348
+      ChatGPT_kuromiAtlas256_19: 3694648167847999047
+      ChatGPT_kuromiAtlas256_2: 3978009467101140554
+      ChatGPT_kuromiAtlas256_3: -5402061240881207545
+      ChatGPT_kuromiAtlas256_4: -4849991612160955008
+      ChatGPT_kuromiAtlas256_5: -4214728668091702076
+      ChatGPT_kuromiAtlas256_6: 9183814887824439484
+      ChatGPT_kuromiAtlas256_7: -1499972640732458018
+      ChatGPT_kuromiAtlas256_8: 5114752271518259190
+      ChatGPT_kuromiAtlas256_9: 6516362838233191336
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
