@@ -109,7 +109,11 @@ public class MovementMain : MonoBehaviour
             remainingJumps = jumpRestoreAmount;
         } else if (hitFloor)
         {
-            print('b');
+            //print('b');
+            if (remainingJumps >= jumpRestoreAmount)
+            {
+                remainingJumps = jumpRestoreAmount - 1;
+            }
             hitFloor = false;
             canAirdive = true;
         }
