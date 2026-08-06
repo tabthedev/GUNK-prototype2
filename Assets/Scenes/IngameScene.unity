@@ -504,6 +504,7 @@ GameObject:
   - component: {fileID: 678671958}
   - component: {fileID: 678671962}
   - component: {fileID: 678671961}
+  - component: {fileID: 678671963}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -669,6 +670,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.8, y: 1.025}
   m_Direction: 0
+--- !u!114 &678671963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678671956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5433c8598192e449f834137429721b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movement_Death
+  isAlive: 1
+  fallDeathHeight: -10
+  ResetStageOnDeath: 0
 --- !u!1 &1739403687
 GameObject:
   m_ObjectHideFlags: 0

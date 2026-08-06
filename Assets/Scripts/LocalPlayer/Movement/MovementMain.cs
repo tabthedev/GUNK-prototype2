@@ -38,6 +38,24 @@ public class MovementMain : MonoBehaviour
     private bool canAirdive = false;
     public float airDiveForce = -20f;
 
+
+    public void ResetMovement()
+    {
+        rigidBody.linearVelocity = Vector2.zero;
+        remainingDashes = dashRestoreAmount;
+        remainingJumps = jumpRestoreAmount;
+        hitFloor = true;
+        canAirdive = false;
+    }
+    public void MoveBody(Vector2 position)
+    {
+        rigidBody.position = position;
+    }
+
+
+
+
+
     private void Awake()
     {
         playerMovementInput = inputActions.FindActionMap("PlayerMovement");
