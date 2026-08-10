@@ -15,6 +15,8 @@ public class CameraMain : MonoBehaviour
     public Vector2 cameraFixedPosition = Vector2.zero;
     public Vector2 cameraOffset = Vector2.up * 2;
 
+    
+
     public float cameraProjectionSize = 5;
     public float cameraProjectionSizeAlphaSpeed = 5;
 
@@ -27,6 +29,7 @@ public class CameraMain : MonoBehaviour
         cameraTarget = player.transform.position;
 
         ForwardOffset = GetComponent<Camera_ForwardOffset>();
+        Movement_Death.OnDeath += ForwardOffset.ResetDirection;
     }
     
     private void Update()

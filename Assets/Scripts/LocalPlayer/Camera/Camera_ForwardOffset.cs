@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class Camera_ForwardOffset : MonoBehaviour
 {
     public float forwardOffset = 4f;
+    public int defaultFrontDirectionX = 1;
 
     private InputAction moveAction;
 
