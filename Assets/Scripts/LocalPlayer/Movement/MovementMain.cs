@@ -98,11 +98,13 @@ public class MovementMain : MonoBehaviour
         if (math.abs(moveVector.x) < 0.05)
         {
             readDirectionX = 0;
-        } else if (moveVector.x > 0)
+        }
+        else if (moveVector.x > 0)
         {
             readDirectionX = 1;
             dashDirection = 1;
-        } else
+        }
+        else
         {
             readDirectionX = -1;
             dashDirection = -1;
