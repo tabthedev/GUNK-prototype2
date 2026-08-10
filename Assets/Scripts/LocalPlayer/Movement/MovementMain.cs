@@ -191,23 +191,23 @@ public class MovementMain : MonoBehaviour
 
     private void Jump()
     {
-        print("jump");
-        print(remainingJumps);
+        //print("jump");
+        //print(remainingJumps);
         rigidBody.linearVelocityY = jumpForce;
     }
 
     private void AirDive()
     {
-        print("dive");
-        print(canAirdive);
+        //print("dive");
+        //print(canAirdive);
         rigidBody.linearVelocityY = airDiveForce;
     }
 
     private void Dash()
     {
-        print("dash");
-        print(remainingDashes);
-        print(dashDirection);
+        //print("dash");
+        //print(remainingDashes);
+        //print(dashDirection);
         actualDirectionX = dashDirection * dashForce;
     }
 }
