@@ -26,6 +26,7 @@ public class CameraMain : MonoBehaviour
     private void Awake()
     {
         camera.transform.position = player.transform.position;
+        camera.orthographicSize = cameraProjectionSize;
         cameraTarget = player.transform.position;
 
         ForwardOffset = GetComponent<Camera_ForwardOffset>();
