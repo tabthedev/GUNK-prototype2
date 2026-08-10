@@ -37,4 +37,18 @@ public class Camera_ForwardOffset : MonoBehaviour
         actualDirectionX = math.lerp(actualDirectionX, readDirectionX, 4f * Time.deltaTime);
         return Vector2.right * forwardOffset * actualDirectionX;
     }
+
+
+
+    public void ResetDirection()
+    {
+        print("reset");
+        readDirectionX = defaultFrontDirectionX;
+    }
+    public void ResetDirection(int newFrontDirectionX)
+    {
+        print("reset with " + newFrontDirectionX);
+        defaultFrontDirectionX = newFrontDirectionX;
+        readDirectionX = defaultFrontDirectionX;
+    }
 }
