@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,9 @@ public class Movement_Death : MonoBehaviour
     public float fallDeathHeight = -10f;
     public bool ResetStageOnDeath = false;
     private Vector2 lastCheckpoint = Vector2.zero;
+
+
+    public static event Action OnDeath;
 
 
     public void SetCheckpoint(Vector2 position)
@@ -61,6 +65,8 @@ public class Movement_Death : MonoBehaviour
             movementMain.ResetMovement();
             movementMain.MoveBody(lastCheckpoint);
         }
+
+        OnDeath?.Invoke();
     }
 
 
