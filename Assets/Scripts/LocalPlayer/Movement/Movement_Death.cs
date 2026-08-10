@@ -49,7 +49,7 @@ public class Movement_Death : MonoBehaviour
     {
         isAlive = false;
     }
-    private void FetchDeath()
+    public void FetchDeath()
     {
         if (isAlive)
         {
