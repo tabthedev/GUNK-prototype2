@@ -53,7 +53,7 @@ public class CameraMain : MonoBehaviour
             cameraTarget = cameraFixedPosition;
         }
 
-        Vector2 actualCameraOffset = cameraOffset + ForwardOffset.CalculateForwardOffset();
+        Vector2 actualCameraOffset = cameraMode == "FixedPosition" ? Vector2.zero : cameraOffset + ForwardOffset.CalculateForwardOffset();
 
         currentPosition = new Vector3(
             math.lerp(camera.transform.position.x, cameraTarget.x + actualCameraOffset.x, math.clamp(cameraXAlphaSpeed * Time.deltaTime, 0, 1)),
