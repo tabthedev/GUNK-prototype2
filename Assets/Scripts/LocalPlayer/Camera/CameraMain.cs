@@ -53,8 +53,8 @@ public class CameraMain : MonoBehaviour
         Vector2 actualCameraOffset = cameraOffset + ForwardOffset.CalculateForwardOffset();
 
         currentPosition = new Vector3(
-            math.lerp(camera.transform.position.x, cameraTarget.x + cameraOffset.x, math.clamp(cameraXAlphaSpeed * Time.deltaTime, 0, 1)),
-            math.lerp(camera.transform.position.y, cameraTarget.y + cameraOffset.y, math.clamp(cameraYAlphaSpeed * Time.deltaTime, 0, 1)),
+            math.lerp(camera.transform.position.x, cameraTarget.x + actualCameraOffset.x, math.clamp(cameraXAlphaSpeed * Time.deltaTime, 0, 1)),
+            math.lerp(camera.transform.position.y, cameraTarget.y + actualCameraOffset.y, math.clamp(cameraYAlphaSpeed * Time.deltaTime, 0, 1)),
             -10
         );
 
