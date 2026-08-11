@@ -762,6 +762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5433c8598192e449f834137429721b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement_Death
+  spawnPosition: {x: -14.9, y: -0.5}
   isAlive: 1
   fallDeathHeight: -5
   ResetStageOnDeath: 0
