@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwitchCameraConfig : MonoBehaviour
@@ -15,16 +14,27 @@ public class SwitchCameraConfig : MonoBehaviour
     public Vector2 cameraTargetOffset;
     public float cameraProjectionSize = 5;
     public float cameraProjectionSizeAlphaSpeed = 1;
+
     public Vector2 actualCameraPosition;
 
+    public bool revertOnExit = true;
     public bool ignoreCameraModeChange;
     public bool ignoreCameraAlphaSpeed;
     public bool ignoreCameraTargetFixedPosition;
     public bool ignoreCameraTargetOffset;
     public bool ignoreCameraProjectionSize;
     public bool ignoreCameraProjectionSizeAlphaSpeed;
+
     public bool reflectActualCameraPosition;
 
+
+
+    private string originalCameraMode;
+    private Vector2 originalCameraAlphaSpeed;
+    private Vector2 originalCameraTargetFixedPosition;
+    private Vector2 originalCameraTargetOffset;
+    private float originalCameraProjectionSize;
+    private float originalCameraProjectionSizeAlphaSpeed;
 
 
 
@@ -54,7 +64,7 @@ public class SwitchCameraConfig : MonoBehaviour
         print(collision.gameObject);
         if (collision.collider.gameObject == player)
         {
-            print("foo");
+            SaveOriginalConfig();
             if (!ignoreCameraModeChange)
             {
                 cameraMain.cameraMode = cameraMode;
@@ -85,5 +95,41 @@ public class SwitchCameraConfig : MonoBehaviour
                 actualCameraPosition = camera.transform.position;
             }
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (!revertOnExit) return;
+
+        if (collision.collider.gameObject == player)
+        {
+            RevertToOriginalConfig();
+        }
+    }
+
+
+
+    private void SaveOriginalConfig()
+    {
+        originalCameraMode = cameraMain.cameraMode;
+
+        originalCameraAlphaSpeed = new Vector2(cameraMain.cameraXAlphaSpeed, cameraMain.cameraYAlphaSpeed);
+
+        originalCameraTargetFixedPosition = cameraMain.cameraFixedPosition;
+        originalCameraTargetOffset = cameraMain.cameraOffset;
+
+        originalCameraProjectionSize = cameraMain.cameraProjectionSize;
+        originalCameraProjectionSizeAlphaSpeed = cameraMain.cameraProjectionSizeAlphaSpeed;
+    }
+
+    private void RevertToOriginalConfig()
+    {
+        cameraMain.cameraMode = originalCameraMode;
+        cameraMain.cameraXAlphaSpeed = originalCameraAlphaSpeed.x;
+        cameraMain.cameraYAlphaSpeed = originalCameraAlphaSpeed.y;
+        cameraMain.cameraFixedPosition = originalCameraTargetFixedPosition;
+        cameraMain.cameraOffset = originalCameraTargetOffset;
+        cameraMain.cameraProjectionSize = originalCameraProjectionSize;
+        cameraMain.cameraProjectionSizeAlphaSpeed = originalCameraProjectionSizeAlphaSpeed;
     }
 }

@@ -38,6 +38,24 @@ public class MovementMain : MonoBehaviour
     private bool canAirdive = false;
     public float airDiveForce = -20f;
 
+
+    public void ResetMovement()
+    {
+        rigidBody.linearVelocity = Vector2.zero;
+        remainingDashes = dashRestoreAmount;
+        remainingJumps = jumpRestoreAmount;
+        hitFloor = true;
+        canAirdive = false;
+    }
+    public void MoveBody(Vector2 position)
+    {
+        rigidBody.position = position;
+    }
+
+
+
+
+
     private void Awake()
     {
         playerMovementInput = inputActions.FindActionMap("PlayerMovement");
@@ -59,7 +77,7 @@ public class MovementMain : MonoBehaviour
         remainingJumps = jumpRestoreAmount;
         
 
-        floorDetectionSize = new Vector2(collider.size.x * 0.8f, collider.size.x * 0.25f);
+        floorDetectionSize = new Vector2(gameObject.transform.localScale.x * collider.size.x * 0.8f, collider.size.x * 0.25f);
     }
 
     private void OnEnable()
@@ -80,11 +98,13 @@ public class MovementMain : MonoBehaviour
         if (math.abs(moveVector.x) < 0.05)
         {
             readDirectionX = 0;
-        } else if (moveVector.x > 0)
+        }
+        else if (moveVector.x > 0)
         {
             readDirectionX = 1;
             dashDirection = 1;
-        } else
+        }
+        else
         {
             readDirectionX = -1;
             dashDirection = -1;
@@ -171,23 +191,23 @@ public class MovementMain : MonoBehaviour
 
     private void Jump()
     {
-        print("jump");
-        print(remainingJumps);
+        //print("jump");
+        //print(remainingJumps);
         rigidBody.linearVelocityY = jumpForce;
     }
 
     private void AirDive()
     {
-        print("dive");
-        print(canAirdive);
+        //print("dive");
+        //print(canAirdive);
         rigidBody.linearVelocityY = airDiveForce;
     }
 
     private void Dash()
     {
-        print("dash");
-        print(remainingDashes);
-        print(dashDirection);
+        //print("dash");
+        //print(remainingDashes);
+        //print(dashDirection);
         actualDirectionX = dashDirection * dashForce;
     }
 }
