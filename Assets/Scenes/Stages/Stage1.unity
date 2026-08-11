@@ -214,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2089157541}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &159102084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5433c8598192e449f834137429721b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement_Death
-  spawnPosition: {x: 50, y: -0.5}
+  spawnPosition: {x: -15, y: -0.5}
   isAlive: 1
   fallDeathHeight: -5
   ResetStageOnDeath: 0
