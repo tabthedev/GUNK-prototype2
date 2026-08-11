@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class Movement_Death : MonoBehaviour
 {
+    public Vector2 spawnPosition = Vector2.zero;
+
     private MovementMain movementMain;
 
     private Rigidbody2D rigidBody;
@@ -22,6 +24,12 @@ public class Movement_Death : MonoBehaviour
         lastCheckpoint = position;
     }
 
+    public void ReturnToCheckpoint()
+    {
+        movementMain.ResetMovement();
+        movementMain.MoveBody(lastCheckpoint);
+    }
+
 
 
 
@@ -30,6 +38,9 @@ public class Movement_Death : MonoBehaviour
         movementMain = GetComponent<MovementMain>();
 
         rigidBody = GetComponent<Rigidbody2D>();
+
+        lastCheckpoint = spawnPosition;
+        ReturnToCheckpoint();
     }
     private void Update()
     {
@@ -62,8 +73,7 @@ public class Movement_Death : MonoBehaviour
         }
         else
         {
-            movementMain.ResetMovement();
-            movementMain.MoveBody(lastCheckpoint);
+            ReturnToCheckpoint();
         }
 
         OnDeath?.Invoke();
