@@ -77,7 +77,7 @@ public class MovementMain : MonoBehaviour
         remainingJumps = jumpRestoreAmount;
         
 
-        floorDetectionSize = new Vector2(collider.size.x * 0.8f, collider.size.x * 0.25f);
+        floorDetectionSize = new Vector2(gameObject.transform.localScale.x * collider.size.x * 0.8f, collider.size.x * 0.25f);
     }
 
     private void OnEnable()
